@@ -34,11 +34,6 @@ To update this module:
 ```bash
 npm update -g generator-jhipster-leafletmap
 ```
-## With github
-
-Clone the project on :
-
-https://github.com/ultratrail/generator-jhipster-leafletmap
 
 # Usage
 
@@ -52,6 +47,47 @@ yo jhipster-leafletmap
 ```
 
 3) Press ENTER when the generator ask to you the first question.
+
+## Using Docker
+
+Download the Dockerfile:
+
+```bash
+mkdir docker
+cd docker
+wget https://github.com/yeoman-projects/generator-jhipster-leafletmap/raw/master/Dockerfile
+```
+
+Build the Docker images:
+
+```bash
+docker build -t generator-jhipster-leafletmap:latest .
+```
+
+Make a folder where you want to generate the Service:
+
+```bash
+mkdir service
+cd service
+```
+
+Run the generator from image to generate service:
+
+```bash
+docker run -it --rm -v $PWD:/home/jhipster/app generator-jhipster-leafletmap
+```
+
+Run and attach interactive shell to the generator docker container to work from inside the running container:
+
+```bash
+docker run -it --rm -v $PWD:/home/jhipster/app generator-jhipster-leafletmap /bin/bash
+```
+
+## With github
+
+Clone the project on :
+
+https://github.com/ultratrail/generator-jhipster-leafletmap
 
 ## If you cloned the project from github
 
